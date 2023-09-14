@@ -24,7 +24,7 @@ export class ImageGallery extends Component {
       });
       requestToTheServer(request, 1).then(({ hits, totalHits }) => {
         if (totalHits === 0) {
-          alert('sorry, net contenta');
+          alert('Sorry, no content found!');
           this.setState(prev => ({
             images: [...hits],
             loader: false,
@@ -63,7 +63,7 @@ export class ImageGallery extends Component {
           visibleBtn: false,
           loader: false,
         });
-        alert('bolshe netu');
+        alert('Last page loaded.');
       } else {
         this.setState({
           visibleBtn: true,

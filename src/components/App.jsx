@@ -29,8 +29,8 @@ export class App extends Component {
       <>
         <Searchbar onSubmit={this.submitForm} />
 
-        <ImageGallery request={request}/>
-        
+        <ImageGallery request={request} />
+      
       </>
     );
   }
