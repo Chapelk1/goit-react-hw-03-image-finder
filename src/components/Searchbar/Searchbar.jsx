@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Header, Form, Input, Btn ,} from './Searchbar.styled';
-
+import PropTypes from 'prop-types'
 export class Searchbar extends Component {
   state = {
     request: ''
@@ -38,4 +38,9 @@ export class Searchbar extends Component {
         </Header>
       );
   }
+}
+
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func,
 }

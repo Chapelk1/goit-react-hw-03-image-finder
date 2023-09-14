@@ -1,6 +1,7 @@
 import { Component } from "react"
 import {Modal} from 'components/Modal/Modal'
 import { Item } from "./ImageGalleryItem.styled"
+import PropTypes from 'prop-types';
 export class ImageGalleryItem extends Component {
   state = {
     showModal: false,
@@ -24,4 +25,11 @@ export class ImageGalleryItem extends Component {
   }
   
   
+};
+
+
+ImageGalleryItem.propTypes = {
+  img: PropTypes.string.isRequired,
+  secondImg: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
 };

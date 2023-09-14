@@ -1,7 +1,7 @@
 import { createPortal } from "react-dom";
 import { BackDrop, Mod } from 'components/Modal/Modal.styled';
 import { Component } from "react";
-
+import PropTypes from 'prop-types';
 const modalRoot = document.querySelector('#modal-root')
 const body = document.querySelector('body');
 
@@ -43,3 +43,9 @@ export class Modal extends Component  {
     
 }
 
+
+Modal.propTypes = {
+  tag: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  onToggle: PropTypes.func.isRequired,
+};

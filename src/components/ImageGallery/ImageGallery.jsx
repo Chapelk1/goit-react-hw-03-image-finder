@@ -4,6 +4,7 @@ import { requestToTheServer } from 'api-pixabay';
 import { Button } from 'components/Button/Button';
 import {Loader} from 'components/Loader/Loader'
 import { List, Container } from './ImageGalery.styled';
+import PropTypes from 'prop-types';
 export class ImageGallery extends Component {
   state = {
     images: null,
@@ -107,3 +108,9 @@ export class ImageGallery extends Component {
     );
   }
 };
+
+
+
+ImageGallery.propTypes = {
+  request: PropTypes.string.isRequired,
+}
